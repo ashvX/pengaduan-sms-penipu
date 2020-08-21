@@ -102,6 +102,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
           child: new TextFormField(
             decoration: const InputDecoration(
               hintText: 'test bentrok dgn CT',
+              hintText: '123',
               labelText: 'feature 2 from master',
             ),
             obscureText: true,
