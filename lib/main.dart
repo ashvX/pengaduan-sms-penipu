@@ -102,7 +102,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
           child: new TextFormField(
             decoration: const InputDecoration(
               hintText: 'test',
-              labelText: 'label',
+              labelText: 'feature 2 from master',
             ),
             obscureText: true,
           ),
