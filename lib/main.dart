@@ -95,7 +95,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
           style: null,
         ),
         new Text(
-          'Text',
+          'Text feature-1',
           style: null,
         ),
         new Flexible(
