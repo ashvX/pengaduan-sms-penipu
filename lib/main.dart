@@ -101,8 +101,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
         new Flexible(
           child: new TextFormField(
             decoration: const InputDecoration(
-              hintText: 'test bentrok dgn CT',
-              hintText: '123',
+              hintText: 'test bentrok dgn CT 123',
               labelText: 'feature 2 from master',
             ),
             obscureText: true,
