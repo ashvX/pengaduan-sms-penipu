@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:layanan_pengaduan_sms_penipu/start_page.dart';
+import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -7,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Retrieve Text Input',
-      home: MyCustomForm(),
+      home: StartPage(),
     );
   }
 }
@@ -35,13 +39,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Retrieve Text Input',
-          style: TextStyle(color: Colors.red),
-        ),
-      ),
-      body: buildForm(),
+      body: buildSliverBody(),
       floatingActionButton: FloatingActionButton(
         // When the user presses the button, show an alert dialog containing
         // the text that the user has entered into the text field.
@@ -72,6 +70,79 @@ class _MyCustomFormState extends State<MyCustomForm> {
         ),
         boxText,
         Text('Ini text'),
+      ],
+    );
+  }
+
+  Widget buildSliverBody() {
+    return CustomScrollView(
+      slivers: <Widget>[
+        SliverAppBar(
+          title: Text('Sliver Demo'),
+          leading: Icon(Icons.menu),
+          floating: true,
+          snap: true,
+          actions: <Widget>[
+            Icon(Icons.voice_chat),
+          ],
+        ),
+        SliverList(
+          delegate: SliverChildListDelegate([
+            ListTile(
+              leading: Icon(Icons.volume_off),
+              title: Text("Volume Off"),
+            ),
+
+            ListTile(
+                leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+            ListTile(
+                leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+            ListTile(
+                leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+            ListTile(
+                leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+            ListTile(
+                leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+            ListTile(
+                leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+            ListTile(
+                leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+            ListTile(
+                leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+            ListTile(
+                leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+            ListTile(
+                leading: Icon(Icons.volume_mute), title: Text("Volume Mute")),
+            ListTile(
+                leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+            ListTile(
+                leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+            ListTile(
+                leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+            ListTile(
+                leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+            ListTile(
+                leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+            ListTile(
+                leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+            ListTile(
+                leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+            ListTile(
+                leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+            ListTile(
+                leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+            ListTile(
+                leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+            ListTile(
+                leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+            ListTile(
+                leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+            ListTile(
+                leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+            ListTile(
+                leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+          ]),
+        )
       ],
     );
   }
