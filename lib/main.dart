@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:layanan_pengaduan_sms_penipu/start_page.dart';
+import 'package:layanan_pengaduan_sms_penipu/pages/my_inbox.dart';
+import 'package:layanan_pengaduan_sms_penipu/pages/start_page.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:layanan_pengaduan_sms_penipu/pages/text_field_page.dart';
 
 
 void main() => runApp(MyApp());
@@ -11,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Retrieve Text Input',
-      home: StartPage(),
+      home: MyInbox(),
     );
   }
 }
@@ -139,6 +141,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
                 leading: Icon(Icons.volume_down), title: Text("Volume Down")),
             ListTile(
                 leading: Icon(Icons.volume_down), title: Text("Volume Down")),
+            CTextFormField(),
             ListTile(
                 leading: Icon(Icons.volume_down), title: Text("Volume Down")),
           ]),
