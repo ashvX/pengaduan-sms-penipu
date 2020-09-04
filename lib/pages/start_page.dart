@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:layanan_pengaduan_sms_penipu/pages/text_field_page.dart';
 
 class StartPage extends StatefulWidget {
   @override
@@ -10,7 +11,7 @@ class _StartPageState extends State<StartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: buildSliverBody(),
+      body: CTextFormField(),
     );
   }
 
