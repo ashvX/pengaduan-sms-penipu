@@ -13,6 +13,8 @@ class MyInbox extends StatefulWidget {
 class MyInboxState extends State {
   SmsQuery query = new SmsQuery();
   List messages = new List();
+  Map<String, bool> values = {' foo': true, ' bar': false};
+
   @override
   initState() {
     // TODO: implement initState
@@ -41,12 +43,18 @@ class MyInboxState extends State {
                     child: CheckboxListTile(
                       // leading: Icon(Icons.markunread,color: Colors.pink,),
                       title: Text(messages[index].address),
-                      value: timeDilation != 1.0,
+                      value: timeDilation != 0.5,
                       subtitle: Text(
                         messages[index].body,
                         maxLines: 4,
                         style: TextStyle(),
                       ),
+                      onChanged: (bool value) {
+                        setState(() {
+                          timeDilation = value ? 1.0 : 0.5;
+                        });
+                      },
+                      secondary: const Icon(Icons.hourglass_empty),
                     ),
                   );
                 });
