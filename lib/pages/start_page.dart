@@ -57,6 +57,7 @@ class _StartPageState extends State<StartPage> {
                       ),
                     ),
                     Padding(
+
                       padding: const EdgeInsets.fromLTRB(16.0, 6.0, 16.0, 16.0),
                       child: Icon(Icons.shopping_cart, color: Colors.white, size: 36.0,),
                     )
