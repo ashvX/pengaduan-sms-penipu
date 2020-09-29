@@ -5,7 +5,6 @@ import 'package:sms/sms.dart';
 class MyInbox extends StatefulWidget {
   @override
   State createState() {
-    // TODO: implement createState
     return MyInboxState();
   }
 }
@@ -13,6 +12,7 @@ class MyInbox extends StatefulWidget {
 class MyInboxState extends State {
   SmsQuery query = new SmsQuery();
   List messages = new List();
+  int _bottomIxd = 0;
 
   @override
   initState() {
@@ -62,13 +62,47 @@ class MyInboxState extends State {
           );
         },
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        onTap: (value) {
+          setState(() {
+            _bottomIxd = value;
+          });
+        },
+        currentIndex: _bottomIxd,
+        items: [
+          BottomNavigationBarItem(icon: new Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: new Icon(Icons.message), label: 'Message'),
+          BottomNavigationBarItem(
+              icon: DropdownButtonHideUnderline(
+                child: DropdownButton(
+
+                  iconSize: 30.0,
+                  icon: Icon(Icons.report),
+                  items: [
+                    DropdownMenuItem(
+                      child: Icon(Icons.report),
+                      value: 1,
+                    ),
+                    DropdownMenuItem(
+                      child: Icon(Icons.share),
+                      value: 2,
+                    ),
+                  ],
+                  onChanged: (value) {},
+                ),
+              ),
+              label: 'Report',
+
+          ),
+        ],
+      ),
     );
   }
 
   fetchSMS() async {
     messages = await query.getAllSms;
   }
-
 }
 
 class MultiCheckBoxField extends StatelessWidget {
