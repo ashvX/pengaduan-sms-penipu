@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:layanan_pengaduan_sms_penipu/pages/my_inbox.dart';
+import 'package:layanan_pengaduan_sms_penipu/pages/sms_inbox.dart';
 import 'package:layanan_pengaduan_sms_penipu/pages/start_page.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:layanan_pengaduan_sms_penipu/pages/text_field_page.dart';
 
 
-void main() => runApp(MyApp());
+void main() => runApp(SmsInbox());
 
 class MyApp extends StatelessWidget {
   @override
